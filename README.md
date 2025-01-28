@@ -78,7 +78,7 @@ Mengapa menggunakan IQR?
 - Nilai-nilai yang berada di luar rentang [Q1 - 1.5IQR, Q3 + 1.5IQR] dianggap sebagai outlier.
 - Cocok untuk data dengan distribusi tidak normal dan lebih tahan terhadap pengaruh outlier ekstrem dibandingkan metode lain.
 
-<pre> ```cars_numerik = cars.select_dtypes(include=['number'])
+<pre> ```python cars_numerik = cars.select_dtypes(include=['number'])
 
 Q1 = cars_numerik.quantile(0.25) ```
 Q3 = cars_numerik.quantile(0.75)
