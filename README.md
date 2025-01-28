@@ -127,15 +127,15 @@ Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyel
     Parameter:
     - `n_neighbors=13:` Menentukan jumlah tetangga terdekat yang akan digunakan untuk menghitung prediksi. Semakin besar nilai k, semakin smooth modelnya, tetapi terlalu besar bisa mengurangi akurasi jika data tidak linier.
     
-```python
-from sklearn.neighbors import KNeighborsRegressor
-from sklearn.metrics import mean_squared_error
-
-knn = KNeighborsRegressor(n_neighbors=13)
-knn.fit(X_train, y_train)
-
-models.loc['train_mse','knn'] = mean_squared_error(y_pred = knn.predict(X_train), y_true=y_train)
-```
+    ```python
+    from sklearn.neighbors import KNeighborsRegressor
+    from sklearn.metrics import mean_squared_error
+    
+    knn = KNeighborsRegressor(n_neighbors=13)
+    knn.fit(X_train, y_train)
+    
+    models.loc['train_mse','knn'] = mean_squared_error(y_pred = knn.predict(X_train), y_true=y_train)
+    ```
 2. Random Forest
 
     Random Forest adalah algoritma ensemble learning yang menggabungkan beberapa pohon keputusan (decision trees). Setiap pohon keputusan dibuat dengan subset acak dari data dan fitur, dan hasilnya digabungkan untuk memberikan prediksi akhir. Random Forest mengurangi overfitting yang sering terjadi pada pohon keputusan tunggal dengan cara menggabungkan banyak model.
@@ -146,15 +146,15 @@ models.loc['train_mse','knn'] = mean_squared_error(y_pred = knn.predict(X_train)
     - `random_state=55:` Mengatur seed untuk menghasilkan hasil yang dapat diulang.
     - `n_jobs=-1:` Menggunakan semua core prosesor untuk mempercepat komputasi.
       
-```python
-from sklearn.ensemble import RandomForestRegressor
-
-# buat model prediksi
-RF = RandomForestRegressor(n_estimators=100, max_depth=10, random_state=55, n_jobs=-1)
-RF.fit(X_train, y_train)
-
-models.loc['train_mse','RandomForest'] = mean_squared_error(y_pred=RF.predict(X_train), y_true=y_train)
-```
+    ```python
+    from sklearn.ensemble import RandomForestRegressor
+    
+    # buat model prediksi
+    RF = RandomForestRegressor(n_estimators=100, max_depth=10, random_state=55, n_jobs=-1)
+    RF.fit(X_train, y_train)
+    
+    models.loc['train_mse','RandomForest'] = mean_squared_error(y_pred=RF.predict(X_train), y_true=y_train)
+    ```
 3. Adaptive Boosting
 
     AdaBoost (Adaptive Boosting) adalah algoritma ensemble yang membangun model prediktif secara iteratif. Pada setiap iterasi, model yang lebih lemah diberikan bobot lebih besar untuk memperbaiki kesalahan yang dibuat oleh model sebelumnya. AdaBoost bekerja dengan meningkatkan model-model yang lemah menjadi model yang lebih kuat dengan memberikan perhatian lebih pada data yang sulit diprediksi
@@ -162,7 +162,8 @@ models.loc['train_mse','RandomForest'] = mean_squared_error(y_pred=RF.predict(X_
     Parameter:
     - `n_estimators=100:` Menentukan jumlah iterasi (jumlah model yang akan digabungkan). Semakin besar jumlah estimators, semakin kuat modelnya.
     - `random_state=55:` Mengatur seed untuk menghasilkan hasil yang dapat diulang.
-      
+
+
     ```python
     from sklearn.ensemble import AdaBoostRegressor
     
