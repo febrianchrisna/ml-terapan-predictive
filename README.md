@@ -333,7 +333,7 @@ Jadi Random Forest (RF) menunjukkan performa terbaik dengan nilai MSE yang renda
 
 ### Hasi Setelah Hyperparameter Tuning
 Untuk meningkatkan performa model, dilakukan Hyperparameter Tuning menggunakan Grid Search, sebuah teknik sistematis untuk menguji kombinasi parameter tertentu guna menemukan konfigurasi terbaik. Grid Search bekerja dengan mencoba semua kemungkinan kombinasi parameter yang didefinisikan sebelumnya, lalu mengevaluasi performa model berdasarkan metrik tertentu, seperti Mean Squared Error (MSE).
-![Hasil](assets/hasil.png)
+![Tuning](assets/tuning.png)
 - Random Forest (RF):
   Setelah dilakukan tuning, nilai MSE pada data latih turun secara signifikan menjadi 4,076,945.91, sementara pada data uji juga mengalami penurunan yang cukup besar menjadi 22,735,601.10. Perbaikan kinerja yang signifikan ini menunjukkan bahwa model RF sangat responsif terhadap optimasi hyperparameter. Dengan kemampuan generalisasi yang sangat baik, RF muncul sebagai model terbaik di antara ketiga pilihan yang ada.
 
