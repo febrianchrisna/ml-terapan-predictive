@@ -145,10 +145,8 @@ Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyel
     - `max_depth=10:` Menentukan kedalaman maksimum setiap pohon keputusan. Membatasi kedalaman pohon dapat membantu menghindari overfitting.
     - `random_state=55:` Mengatur seed untuk menghasilkan hasil yang dapat diulang.
     - `n_jobs=-1:` Menggunakan semua core prosesor untuk mempercepat komputasi.
-
-
-
-    ```python
+   
+  ```python
     from sklearn.ensemble import RandomForestRegressor
     
     # buat model prediksi
@@ -156,7 +154,7 @@ Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyel
     RF.fit(X_train, y_train)
     
     models.loc['train_mse','RandomForest'] = mean_squared_error(y_pred=RF.predict(X_train), y_true=y_train)
-    ```
+   ```
 2. Adaptive Boosting
 
     AdaBoost (Adaptive Boosting) adalah algoritma ensemble yang membangun model prediktif secara iteratif. Pada setiap iterasi, model yang lebih lemah diberikan bobot lebih besar untuk memperbaiki kesalahan yang dibuat oleh model sebelumnya. AdaBoost bekerja dengan meningkatkan model-model yang lemah menjadi model yang lebih kuat dengan memberikan perhatian lebih pada data yang sulit diprediksi
@@ -164,10 +162,8 @@ Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyel
     Parameter:
     - `n_estimators=100:` Menentukan jumlah iterasi (jumlah model yang akan digabungkan). Semakin besar jumlah estimators, semakin kuat modelnya.
     - `random_state=55:` Mengatur seed untuk menghasilkan hasil yang dapat diulang.
-
-
-
-    ```python
+      
+  ```python
     from sklearn.ensemble import AdaBoostRegressor
     
     boosting = AdaBoostRegressor(n_estimators=250,
@@ -176,7 +172,7 @@ Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyel
     
     boosting.fit(X_train, y_train)
     models.loc['train_mse','Boosting'] = mean_squared_error(y_pred=boosting.predict(X_train), y_true=y_train)
-    ```
+  ```
 
 ## Evaluation
 Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
