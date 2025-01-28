@@ -362,5 +362,6 @@ Berdasarkan analisis yang telah dilakukan, dapat disimpulkan:
 Dengan demikian, dapat disimpulkan bahwa faktor-faktor seperti tahun pembuatan, jarak tempuh, konsumsi bahan bakar, serta kondisi kendaraan secara komprehensif memengaruhi harga mobil bekas. Dari segi model prediksi, Random Forest (RF) terbukti menjadi algoritma terbaik untuk memprediksi harga kendaraan bekas dengan akurasi tinggi pada dataset ini.
 
 
-_Catatan:_
-- _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
+## Referensi
+[Mispricing of used cars could cost UK dealers nearly £500m in 2024](https://www.motorfinanceonline.com/news/indicata-uk-used-car-mispricing/?cf-view) 
+[Used Vehicles For Sale](https://www.kaggle.com/datasets/farhanhossein/used-vehicles-for-sale?)
