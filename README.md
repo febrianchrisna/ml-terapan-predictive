@@ -175,13 +175,23 @@ Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyel
   ```
 
 ## Evaluation
-Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
+### Metrik Evaluasi
+### Evaluation Metric: Mean Squared Error (MSE)
 
-Sebagai contoh, Anda memiih kasus klasifikasi dan menggunakan metrik **akurasi, precision, recall, dan F1 score**. Jelaskan mengenai beberapa hal berikut:
-- Penjelasan mengenai metrik yang digunakan
-- Menjelaskan hasil proyek berdasarkan metrik evaluasi
+Mean Squared Error (MSE) digunakan sebagai metrik evaluasi untuk model regresi. MSE menghitung rata-rata kuadrat dari selisih antara nilai aktual (\(y_i\)) dan nilai prediksi (\(\hat{y}_i\)). Metrik ini sangat sensitif terhadap error besar karena perhitungan kuadratnya.
 
-Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, problem statement, dan solusi yang diinginkan.
+**Rumus:**
+
+\[
+\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
+\]
+
+**Penjelasan:**
+- \( n \): Jumlah data dalam dataset.
+- \( y_i \): Nilai target aktual dari data ke-\(i\).
+- \( \hat{y}_i \): Nilai prediksi model untuk data ke-\(i\).
+
+MSE yang lebih kecil menunjukkan bahwa model memiliki prediksi yang lebih akurat terhadap nilai target.
 
 **Rubrik/Kriteria Tambahan (Opsional)**: 
 - Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
