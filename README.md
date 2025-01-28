@@ -56,9 +56,29 @@ Referensi: [Used Vehicles For Sale](https://www.kaggle.com/datasets/farhanhossei
 
 
 ## Exploratory Data Analysis
+
+### Kesalahan Tipe Data
+Pada kolom Engine, terdapat kesalahan tipe data dimana nilai string 'E' muncul, padahal seharusnya nilai tersebut adalah 0, yang menunjukkan bahwa mobil tersebut tidak memiliki mesin berbahan bakar fosil atau merupakan mobil listrik. Untuk memperbaiki hal ini, nilai 'E' telah diganti dengan 0, dan tipe data kolom tersebut telah diubah menjadi integer agar lebih sesuai dengan format yang diinginkan dan dapat digunakan dalam analisis lebih lanjut.
+
 ### Missing Value
 Dataset yang digunakan tidak memiliki data null atau kosong. Namun dalam dataset terdapat baris data dengan value 0.
 
+![Missing Value](assets/diagram.png)
+
+Beberapa kolom seperti Kilometres, Engine, City, dan Highway memiliki nilai 0, yang sebenarnya wajar. Nilai 0 pada Kilometres bisa menunjukkan mobil baru yang belum terpakai. Pada Engine, 0 mungkin merujuk pada kendaraan listrik atau yang tidak memiliki mesin berbahan bakar fosil. Sementara pada City dan Highway, nilai 0 bisa terjadi jika konsumsi bahan bakar belum diuji atau kendaraan baru yang efisien. Nilai 0 ini tidak mempengaruhi validitas data.
+
+Dataset ini awalnya memiliki beberapa baris duplikat, yang dapat terjadi karena kesalahan pencatatan atau data yang dimasukkan lebih dari sekali. Namun, untuk memastikan kualitas dan akurasi data, baris-baris duplikat tersebut telah diidentifikasi dan dihapus, sehingga dataset ini kini hanya berisi entri yang unik dan valid.
+
+### Menangani Outlier
+Dataset ini mengandung outliers yang terdeteksi pada beberapa kolom tertentu. Dalam proyek ini, digunakan metode IQR untuk mendeteksi dan menangani outlier pada dataset.
+
+Mengapa menggunakan IQR?
+- IQR adalah metode statistik yang sederhana dan tidak bergantung pada asumsi distribusi data.
+- Metode ini menghitung rentang antar kuartil (Q3 - Q1), di mana Q1 adalah kuartil pertama (25%) dan Q3 adalah kuartil ketiga (75%).
+- Nilai-nilai yang berada di luar rentang [Q1 - 1.5IQR, Q3 + 1.5IQR] dianggap sebagai outlier.
+- Cocok untuk data dengan distribusi tidak normal dan lebih tahan terhadap pengaruh outlier ekstrem dibandingkan metode lain.
+
+<pre> ## Menghapus Outlier Menggunakan Metode IQR Pada proyek ini, outlier dihapus menggunakan metode **Interquartile Range (IQR)** untuk memastikan data yang digunakan lebih akurat dalam analisis dan pemodelan. Berikut adalah langkah-langkah dalam menangani outlier: ```python # Memilih kolom numerik dari dataset cars_numerik = cars.select_dtypes(include=['number']) # Menghitung nilai kuartil 1 (Q1) dan kuartil 3 (Q3) Q1 = cars_numerik.quantile(0.25) Q3 = cars_numerik.quantile(0.75) # Menghitung Interquartile Range (IQR) IQR = Q3 - Q1 # Menghapus outlier berdasarkan IQR cars = cars[~((cars_numerik < (Q1 - 1.5 * IQR)) | (cars_numerik > (Q3 + 1.5 * IQR))).any(axis=1)] # Memeriksa ukuran dataset setelah penghapusan outlier cars.shape ``` Kode di atas: - Memilih kolom numerik untuk menghitung IQR. - Menghapus baris yang memiliki nilai di luar batas bawah dan atas (Q1 - 1.5 * IQR dan Q3 + 1.5 * IQR). - Menampilkan ukuran dataset setelah penghapusan outlier. ```
 
 
 ## Data Preparation
