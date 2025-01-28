@@ -177,7 +177,7 @@ Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyel
 ## Evaluation
 ### Metrik Evaluasi
 
-Mean Squared Error (MSE) digunakan sebagai metrik evaluasi untuk model regresi. MSE menghitung rata-rata kuadrat dari selisih antara nilai aktual (\(y_i\)) dan nilai prediksi (\(\hat{y}_i\)). Metrik ini sangat sensitif terhadap error besar karena perhitungan kuadratnya.
+Mean Squared Error (MSE) digunakan sebagai metrik evaluasi untuk model regresi. MSE menghitung rata-rata kuadrat dari selisih antara nilai aktual yi dan nilai prediksi ŷi. Metrik ini sangat sensitif terhadap error besar karena perhitungan kuadratnya.
 
 **Rumus:**
 ![Missing Value](assets/diagram.png)
