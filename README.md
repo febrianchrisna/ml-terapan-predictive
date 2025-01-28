@@ -124,8 +124,9 @@ Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyel
 
 K-Nearest Neighbor (KNN) adalah algoritma supervised learning yang digunakan untuk regresi dan klasifikasi. Prinsip dasar dari KNN adalah bahwa prediksi untuk suatu data baru dilakukan berdasarkan mayoritas nilai atau rata-rata dari k tetangga terdekatnya di ruang fitur. KNN tidak memerlukan model eksplisit dan memanfaatkan jarak antar data untuk membuat keputusan. Dalam regresi, nilai prediksi dihitung sebagai rata-rata nilai target dari k tetangga terdekat.
 
-    Parameter:
+  Parameter:
     - `n_neighbors=13:` Menentukan jumlah tetangga terdekat yang akan digunakan untuk menghitung prediksi. Semakin besar nilai k, semakin smooth modelnya, tetapi terlalu besar bisa mengurangi akurasi jika data       tidak linier.
+    
 ```python
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.metrics import mean_squared_error
@@ -139,12 +140,11 @@ models.loc['train_mse','knn'] = mean_squared_error(y_pred = knn.predict(X_train)
 
 Random Forest adalah algoritma ensemble learning yang menggabungkan beberapa pohon keputusan (decision trees). Setiap pohon keputusan dibuat dengan subset acak dari data dan fitur, dan hasilnya digabungkan untuk memberikan prediksi akhir. Random Forest mengurangi overfitting yang sering terjadi pada pohon keputusan tunggal dengan cara menggabungkan banyak model.
 
-    Parameter:
+  Parameter:
     - `n_estimators=100:` Menentukan jumlah pohon keputusan dalam hutan. Semakin banyak pohon, semakin kuat modelnya, meskipun dengan biaya komputasi yang lebih tinggi.
     - `max_depth=10:` Menentukan kedalaman maksimum setiap pohon keputusan. Membatasi kedalaman pohon dapat membantu menghindari overfitting.
     - `random_state=55:` Mengatur seed untuk menghasilkan hasil yang dapat diulang.
     - `n_jobs=-1:` Menggunakan semua core prosesor untuk mempercepat komputasi.
-    
 ```python
 from sklearn.ensemble import RandomForestRegressor
 
