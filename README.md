@@ -177,6 +177,8 @@ Insight:
 
 ### Numerical Features
 ![Numerical Features](assets/num_features.png)
+
+Insight:
 - Tahun Pembuatan (Year):
 Distribusi tahun pembuatan menunjukkan pola yang menarik, dengan peningkatan signifikan pada tahun 2016 hingga mencapai puncak pada tahun 2018 dan 2022. Hal ini menunjukkan bahwa dataset ini lebih fokus pada kendaraan bekas yang relatif baru, dengan data yang lebih banyak di tahun-tahun terkini hingga 2022. Pola ini memberikan wawasan tentang tren pasar kendaraan bekas yang semakin mengarah pada model-model terbaru.
 
@@ -199,6 +201,8 @@ Distribusi harga kendaraan bekas menunjukkan variasi yang cukup besar, dari harg
 ## Multivariate Analysis
 ### Categorical Features
 ![Categorical Features](assets/categorical_feature.png)
+
+Insight:
 - Merek vs Harga: Grafik pertama menunjukkan variasi yang signifikan pada harga rata-rata kendaraan bekas di antara berbagai merek, dengan beberapa merek seperti Toyota dan Honda memiliki harga yang jauh lebih tinggi dibandingkan merek lain seperti Mitsubishi dan Geo. Hal ini mengindikasikan bahwa merek kendaraan merupakan faktor penting yang menentukan harga kendaraan bekas.
 - Model vs Harga: Grafik kedua semakin memperkuat bahwa model kendaraan juga merupakan faktor kritis, dengan variabilitas harga rata-rata yang bahkan lebih besar di antara model-model yang berbeda dalam satu merek yang sama. Beberapa model tampaknya mampu mempertahankan nilai jualnya jauh lebih baik dibandingkan model lain.
 - Jenis Bodi vs Harga: Grafik ketiga menunjukkan bahwa jenis bodi kendaraan juga merupakan variabel kunci, dengan SUV, truk, dan beberapa sedan mewah cenderung berada pada kisaran harga yang lebih tinggi, sementara sedan dan hatchback dasar umumnya memiliki harga yang lebih rendah.
@@ -213,10 +217,11 @@ Distribusi harga kendaraan bekas menunjukkan variasi yang cukup besar, dari harg
 ### Numerical Features
 Heatmap digunakan untuk menggambarkan matriks korelasi antar fitur dalam dataset, yang menunjukkan sejauh mana hubungan linear antar fitur. Nilai korelasi ini membantu dalam proses seleksi fitur dengan mengidentifikasi fitur-fitur yang saling berkorelasi kuat. Untuk mengukur hubungan antara fitur numerik dan fitur target, metode Spearman dapat digunakan, karena mampu mengukur korelasi monotonik, yaitu hubungan yang tidak selalu linear, namun tetap menunjukkan kecenderungan pergerakan bersama antara dua variabel. Dimana berguna ketika data tidak mengikuti hubungan linear yang sempurna
 ![Matrix](assets/matrix.png)
+
 Insight:
 - Tahun (Year) vs Lainnya
   
-Tahun menunjukkan korelasi negatif yang kuat dengan Kilometer (-0,89) dan Harga (-0,77). Ini berarti semakin tua kendaraan, semakin rendah jarak tempuh dan harga jual kendaraan bekas.
+  Tahun menunjukkan korelasi negatif yang kuat dengan Kilometer (-0,89) dan Harga (-0,77). Ini berarti semakin tua kendaraan, semakin rendah jarak tempuh dan harga jual kendaraan bekas.
 
 - Kilometer (Kilometres) vs Lainnya
   
