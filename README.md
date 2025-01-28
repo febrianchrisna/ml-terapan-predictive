@@ -8,7 +8,7 @@ Saat ini industri mobil bekas menghadapi tantangan besar dalam strategi penetapa
 
 Untuk mengatasi permasalahan ini, analisis data prediktif berbasis machine learning dapat digunakan untuk mengoptimalkan strategi harga mobil bekas. Model prediktif dapat membantu mengidentifikasi faktor-faktor utama yang mempengaruhi harga kendaraan. Dengan pendekatan ini, penjual dapat menghindari undervaluation pada kendaraan dengan permintaan tinggi dan menyesuaikan harga kendaraan yang kurang diminati secara lebih efektif.
   
-  Format Referensi: [Mispricing of used cars could cost UK dealers nearly £500m in 2024]([https://www.motorfinanceonline.com/news/indicata-uk-used-car-mispricing/?cf-view]) 
+  Format Referensi: [Mispricing of used cars could cost UK dealers nearly £500m in 2024](https://www.motorfinanceonline.com/news/indicata-uk-used-car-mispricing/?cf-view) 
 
 ## Business Understanding
 
