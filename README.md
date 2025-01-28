@@ -129,6 +129,12 @@ Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyel
 
 
 
+
+
+
+
+
+
     ```python
     from sklearn.neighbors import KNeighborsRegressor
     from sklearn.metrics import mean_squared_error
