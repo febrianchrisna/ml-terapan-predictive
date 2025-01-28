@@ -329,13 +329,38 @@ MSE yang lebih kecil menunjukkan bahwa model memiliki prediksi yang lebih akurat
 - Boosting: 
   Boosting memiliki nilai MSE yang lebih tinggi, yaitu **98,725.31** pada data latih, yang hanya sedikit meningkat menjadi **98,770.90** pada data uji. Selisih yang kecil ini menandakan bahwa Boosting memiliki kemampuan generalisasi yang stabil, meskipun kinerjanya secara keseluruhan lebih rendah dibandingkan RF.
 
-Kesimpulan:
-Random Forest (RF) menunjukkan performa terbaik dengan nilai MSE yang rendah dan generalisasi yang baik. KNN cenderung overfitting, sementara Boosting memiliki stabilitas, namun performanya masih kalah dari RF. Oleh karena itu, RF menjadi model yang paling ideal untuk dataset ini.
-
+Jadi Random Forest (RF) menunjukkan performa terbaik dengan nilai MSE yang rendah dan generalisasi yang baik. KNN cenderung overfitting, sementara Boosting memiliki stabilitas, namun performanya masih kalah dari RF. Oleh karena itu, RF menjadi model yang paling ideal untuk dataset ini.
 
 ### Hasi Setelah Hyperparameter Tuning
+Untuk meningkatkan performa model, dilakukan Hyperparameter Tuning menggunakan Grid Search, sebuah teknik sistematis untuk menguji kombinasi parameter tertentu guna menemukan konfigurasi terbaik. Grid Search bekerja dengan mencoba semua kemungkinan kombinasi parameter yang didefinisikan sebelumnya, lalu mengevaluasi performa model berdasarkan metrik tertentu, seperti Mean Squared Error (MSE).
+![Hasil](assets/hasil.png)
+- Random Forest (RF):
+  Setelah dilakukan tuning, nilai MSE pada data latih turun secara signifikan menjadi 4,076,945.91, sementara pada data uji juga mengalami penurunan yang cukup besar menjadi 22,735,601.10. Perbaikan kinerja yang signifikan ini menunjukkan bahwa model RF sangat responsif terhadap optimasi hyperparameter. Dengan kemampuan generalisasi yang sangat baik, RF muncul sebagai model terbaik di antara ketiga pilihan yang ada.
+
+- K-Nearest Neighbors (KNN):
+  Meskipun tuning berhasil menurunkan nilai MSE pada data latih menjadi 22,158,644.75, nilai MSE pada data uji tetap relatif tinggi, yaitu 37,032,832.32. Selisih yang cukup besar antara data latih dan uji menunjukkan bahwa model KNN masih cenderung mengalami overfitting meskipun sudah dilakukan optimasi. Secara keseluruhan, performa KNN tetap lebih rendah dibandingkan dengan RF.
+
+- AdaBoost:
+  Setelah tuning, nilai MSE AdaBoost pada data latih turun menjadi 91,943,161.76, namun nilai MSE pada data uji masih cukup tinggi di 97,181,133.35. Meskipun ada perbaikan, AdaBoost masih mengalami kesulitan dalam menggeneralisasi ke data uji. Dengan demikian, performa AdaBoost berada di bawah RF, meskipun lebih baik daripada KNN.
+
+Secara keseluruhan, Random Forest (RF) tetap menjadi model yang paling unggul setelah tuning, dengan kinerja terbaik pada kedua data latih dan uji. KNN menunjukkan gejala overfitting meskipun ada perbaikan, sementara AdaBoost menunjukkan peningkatan namun masih kesulitan dalam generalisasi, sehingga berada di antara KNN dan RF dalam hal performa.
 
 ## Kesimpulan
+Berdasarkan analisis yang telah dilakukan, dapat disimpulkan:
+
+1. Bagaimana faktor-faktor memengaruhi harga mobil bekas:
+- Tahun pembuatan mobil menunjukkan korelasi negatif yang kuat dengan harga, di mana semakin tua kendaraan, harga cenderung semakin rendah.
+- Jarak tempuh (Kilometres) juga memiliki korelasi negatif dengan harga, di mana kendaraan dengan jarak tempuh lebih tinggi umumnya memiliki harga lebih rendah.
+- Konsumsi bahan bakar di kota (City) dan jalan tol (Highway) terkait erat dengan kapasitas mesin. Kendaraan dengan mesin yang lebih besar cenderung memiliki konsumsi bahan bakar yang lebih tinggi.
+- Selain fitur-fitur tersebut, kondisi kendaraan yang tercermin dari atribut seperti merek, model, jenis bodi, transmisi, penggerak, dan warna juga terbukti berpengaruh signifikan terhadap harga kendaraan bekas.
+  
+2. Model prediksi terbaik:
+- Setelah membandingkan beberapa algoritma machine learning, model Random Forest (RF) menunjukkan performa terbaik dalam memprediksi harga kendaraan bekas.
+- RF menghasilkan nilai Mean Squared Error (MSE) yang paling rendah, baik pada data latih maupun data uji, mengindikasikan prediksi yang paling akurat.
+- Proses optimasi hyperparameter menggunakan Grid Search berhasil meningkatkan kinerja RF secara signifikan, menjadikannya model yang paling unggul di antara alternatif lain seperti KNN dan Boosting.
+
+Dengan demikian, dapat disimpulkan bahwa faktor-faktor seperti tahun pembuatan, jarak tempuh, konsumsi bahan bakar, serta kondisi kendaraan secara komprehensif memengaruhi harga mobil bekas. Dari segi model prediksi, Random Forest (RF) terbukti menjadi algoritma terbaik untuk memprediksi harga kendaraan bekas dengan akurasi tinggi pada dataset ini.
+
 
 _Catatan:_
 - _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
