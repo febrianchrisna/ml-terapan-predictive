@@ -126,16 +126,8 @@ Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyel
 
     **Parameter:**
     - `n_neighbors=13:` Menentukan jumlah tetangga terdekat yang akan digunakan untuk menghitung prediksi. Semakin besar nilai k, semakin smooth modelnya, tetapi terlalu besar bisa mengurangi akurasi jika data tidak linier.
-
-
-
-
-
-
-
-
-
-    ```python
+      
+  ```python
     from sklearn.neighbors import KNeighborsRegressor
     from sklearn.metrics import mean_squared_error
     
@@ -143,7 +135,7 @@ Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyel
     knn.fit(X_train, y_train)
     
     models.loc['train_mse','knn'] = mean_squared_error(y_pred = knn.predict(X_train), y_true=y_train)
-    ```
+  ```
 2. Random Forest
 
     Random Forest adalah algoritma ensemble learning yang menggabungkan beberapa pohon keputusan (decision trees). Setiap pohon keputusan dibuat dengan subset acak dari data dan fitur, dan hasilnya digabungkan untuk memberikan prediksi akhir. Random Forest mengurangi overfitting yang sering terjadi pada pohon keputusan tunggal dengan cara menggabungkan banyak model.
