@@ -183,9 +183,9 @@ Mean Squared Error (MSE) digunakan sebagai metrik evaluasi untuk model regresi. 
 ![Missing Value](assets/diagram.png)
 
 **Penjelasan:**
-- N : Jumlah data dalam dataset.
-- yi: Nilai target aktual
-- y_pred: Nilai prediksi model
+- N = Jumlah data dalam dataset.
+- yi = Nilai target aktual
+- y_pred = Nilai prediksi model
 
 MSE yang lebih kecil menunjukkan bahwa model memiliki prediksi yang lebih akurat terhadap nilai target.
 
