@@ -106,6 +106,7 @@ Insight:
 - Suzuki paling sedikit, mengindikasikan kurang populer.
 - Meskipun terdapat ketidakseimbangan jumlah sampel antar merek, hal ini mencerminkan kondisi pasar mobil bekas yang sebenarnya dan dapat diatasi dengan teknik pemrosesan data yang sesuai.
 - Keberagaman merek yang ada memungkinkan eksplorasi faktor-faktor yang mempengaruhi harga mobil bekas dari berbagai perspektif.
+  
 Model:
 
 ![Outliers](assets/model.png)
