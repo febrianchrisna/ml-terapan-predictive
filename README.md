@@ -78,7 +78,16 @@ Mengapa menggunakan IQR?
 - Nilai-nilai yang berada di luar rentang [Q1 - 1.5IQR, Q3 + 1.5IQR] dianggap sebagai outlier.
 - Cocok untuk data dengan distribusi tidak normal dan lebih tahan terhadap pengaruh outlier ekstrem dibandingkan metode lain.
 
-<pre> ## Menghapus Outlier Menggunakan Metode IQR Pada proyek ini, outlier dihapus menggunakan metode **Interquartile Range (IQR)** untuk memastikan data yang digunakan lebih akurat dalam analisis dan pemodelan. Berikut adalah langkah-langkah dalam menangani outlier: ```python # Memilih kolom numerik dari dataset cars_numerik = cars.select_dtypes(include=['number']) # Menghitung nilai kuartil 1 (Q1) dan kuartil 3 (Q3) Q1 = cars_numerik.quantile(0.25) Q3 = cars_numerik.quantile(0.75) # Menghitung Interquartile Range (IQR) IQR = Q3 - Q1 # Menghapus outlier berdasarkan IQR cars = cars[~((cars_numerik < (Q1 - 1.5 * IQR)) | (cars_numerik > (Q3 + 1.5 * IQR))).any(axis=1)] # Memeriksa ukuran dataset setelah penghapusan outlier cars.shape ``` Kode di atas: - Memilih kolom numerik untuk menghitung IQR. - Menghapus baris yang memiliki nilai di luar batas bawah dan atas (Q1 - 1.5 * IQR dan Q3 + 1.5 * IQR). - Menampilkan ukuran dataset setelah penghapusan outlier. ```
+``` cars_numerik = cars.select_dtypes(include=['number']) ```
+
+``` Q1 = cars_numerik.quantile(0.25) ```
+Q3 = cars_numerik.quantile(0.75)
+IQR=Q3-Q1
+cars=cars[~((cars_numerik<(Q1-1.5*IQR))|(cars_numerik>(Q3+1.5*IQR))).any(axis=1)]
+
+# Cek ukuran dataset setelah kita drop outliers
+cars.shape
+
 
 
 ## Data Preparation
