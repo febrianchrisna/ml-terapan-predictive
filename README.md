@@ -121,6 +121,7 @@ Proses data preparation diperlukan untuk memastikan data yang bersih dan siap di
 ## Modeling
 Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Algoritma yang digunakan yaitu:
 1. K-Nearest Neighbor
+
 K-Nearest Neighbor (KNN) adalah algoritma supervised learning yang digunakan untuk regresi dan klasifikasi. Prinsip dasar dari KNN adalah bahwa prediksi untuk suatu data baru dilakukan berdasarkan mayoritas nilai atau rata-rata dari k tetangga terdekatnya di ruang fitur. KNN tidak memerlukan model eksplisit dan memanfaatkan jarak antar data untuk membuat keputusan. Dalam regresi, nilai prediksi dihitung sebagai rata-rata nilai target dari k tetangga terdekat.
 
     Parameter:
@@ -135,13 +136,15 @@ knn.fit(X_train, y_train)
 models.loc['train_mse','knn'] = mean_squared_error(y_pred = knn.predict(X_train), y_true=y_train)
 ```
 2. Random Forest
+
 Random Forest adalah algoritma ensemble learning yang menggabungkan beberapa pohon keputusan (decision trees). Setiap pohon keputusan dibuat dengan subset acak dari data dan fitur, dan hasilnya digabungkan untuk memberikan prediksi akhir. Random Forest mengurangi overfitting yang sering terjadi pada pohon keputusan tunggal dengan cara menggabungkan banyak model.
 
-Parameter:
-- `n_estimators=100:` Menentukan jumlah pohon keputusan dalam hutan. Semakin banyak pohon, semakin kuat modelnya, meskipun dengan biaya komputasi yang lebih tinggi.
-- `max_depth=10:` Menentukan kedalaman maksimum setiap pohon keputusan. Membatasi kedalaman pohon dapat membantu menghindari overfitting.
-- `random_state=55:` Mengatur seed untuk menghasilkan hasil yang dapat diulang.
-- `n_jobs=-1:` Menggunakan semua core prosesor untuk mempercepat komputasi.
+    Parameter:
+    - `n_estimators=100:` Menentukan jumlah pohon keputusan dalam hutan. Semakin banyak pohon, semakin kuat modelnya, meskipun dengan biaya komputasi yang lebih tinggi.
+    - `max_depth=10:` Menentukan kedalaman maksimum setiap pohon keputusan. Membatasi kedalaman pohon dapat membantu menghindari overfitting.
+    - `random_state=55:` Mengatur seed untuk menghasilkan hasil yang dapat diulang.
+    - `n_jobs=-1:` Menggunakan semua core prosesor untuk mempercepat komputasi.
+    
 ```python
 from sklearn.ensemble import RandomForestRegressor
 
