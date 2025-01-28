@@ -163,16 +163,16 @@ models.loc['train_mse','RandomForest'] = mean_squared_error(y_pred=RF.predict(X_
     - `n_estimators=100:` Menentukan jumlah iterasi (jumlah model yang akan digabungkan). Semakin besar jumlah estimators, semakin kuat modelnya.
     - `random_state=55:` Mengatur seed untuk menghasilkan hasil yang dapat diulang.
       
-```python
-from sklearn.ensemble import AdaBoostRegressor
-
-boosting = AdaBoostRegressor(n_estimators=250,
-                             learning_rate=0.01,
-                             random_state=50)
-
-boosting.fit(X_train, y_train)
-models.loc['train_mse','Boosting'] = mean_squared_error(y_pred=boosting.predict(X_train), y_true=y_train)
-```
+    ```python
+    from sklearn.ensemble import AdaBoostRegressor
+    
+    boosting = AdaBoostRegressor(n_estimators=250,
+                                 learning_rate=0.01,
+                                 random_state=50)
+    
+    boosting.fit(X_train, y_train)
+    models.loc['train_mse','Boosting'] = mean_squared_error(y_pred=boosting.predict(X_train), y_true=y_train)
+    ```
 
 ## Evaluation
 Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
