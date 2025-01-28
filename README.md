@@ -319,7 +319,19 @@ Mean Squared Error (MSE) digunakan sebagai metrik evaluasi untuk model regresi. 
 MSE yang lebih kecil menunjukkan bahwa model memiliki prediksi yang lebih akurat terhadap nilai target.
 
 ### Hasil Sebelum Hyperparameter Tuning
-![Missing Value](assets/diagram.png)
+![Hasil](assets/hasil.png)
+- Random Forest (RF):
+  RF menghasilkan nilai MSE sebesar **19,442.80** pada data latih, yang meningkat menjadi **31,629.55** pada data uji. Peningkatan yang tidak terlalu besar ini menunjukkan bahwa RF memiliki kemampuan generalisasi yang baik.
+
+- K-Nearest Neighbors (KNN):
+  KNN mencatat nilai MSE **32,852.48** pada data latih dan meningkat signifikan menjadi **40,236.50** pada data uji. Selisih yang cukup besar ini mengindikasikan bahwa KNN cenderung mengalami overfitting.
+
+- Boosting: 
+  Boosting memiliki nilai MSE yang lebih tinggi, yaitu **98,725.31** pada data latih, yang hanya sedikit meningkat menjadi **98,770.90** pada data uji. Selisih yang kecil ini menandakan bahwa Boosting memiliki kemampuan generalisasi yang stabil, meskipun kinerjanya secara keseluruhan lebih rendah dibandingkan RF.
+
+Kesimpulan:
+Random Forest (RF) menunjukkan performa terbaik dengan nilai MSE yang rendah dan generalisasi yang baik. KNN cenderung overfitting, sementara Boosting memiliki stabilitas, namun performanya masih kalah dari RF. Oleh karena itu, RF menjadi model yang paling ideal untuk dataset ini.
+
 
 ### Hasi Setelah Hyperparameter Tuning
 
