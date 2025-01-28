@@ -349,20 +349,18 @@ Secara keseluruhan, Random Forest (RF) tetap menjadi model yang paling unggul se
 Berdasarkan analisis yang telah dilakukan, dapat disimpulkan:
 
 1. Bagaimana faktor-faktor memengaruhi harga mobil bekas:
-- Tahun pembuatan mobil menunjukkan korelasi negatif yang kuat dengan harga, di mana semakin tua kendaraan, harga cenderung semakin rendah.
-- Jarak tempuh (Kilometres) juga memiliki korelasi negatif dengan harga, di mana kendaraan dengan jarak tempuh lebih tinggi umumnya memiliki harga lebih rendah.
-- Konsumsi bahan bakar di kota (City) dan jalan tol (Highway) terkait erat dengan kapasitas mesin. Kendaraan dengan mesin yang lebih besar cenderung memiliki konsumsi bahan bakar yang lebih tinggi.
-- Selain fitur-fitur tersebut, kondisi kendaraan yang tercermin dari atribut seperti merek, model, jenis bodi, transmisi, penggerak, dan warna juga terbukti berpengaruh signifikan terhadap harga kendaraan bekas.
+  - Tahun pembuatan mobil menunjukkan korelasi negatif yang kuat dengan harga, di mana semakin tua kendaraan, harga cenderung semakin rendah.
+  - Jarak tempuh (Kilometres) juga memiliki korelasi negatif dengan harga, di mana kendaraan dengan jarak tempuh lebih tinggi umumnya memiliki harga lebih rendah.
+  - Konsumsi bahan bakar di kota (City) dan jalan tol (Highway) terkait erat dengan kapasitas mesin. Kendaraan dengan mesin yang lebih besar cenderung memiliki konsumsi bahan bakar yang lebih tinggi.
+  - Selain fitur-fitur tersebut, kondisi kendaraan yang tercermin dari atribut seperti merek, model, jenis bodi, transmisi, penggerak, dan warna juga terbukti berpengaruh signifikan terhadap harga kendaraan bekas.
   
 2. Model prediksi terbaik:
-- Setelah membandingkan beberapa algoritma machine learning, model Random Forest (RF) menunjukkan performa terbaik dalam memprediksi harga kendaraan bekas.
-- RF menghasilkan nilai Mean Squared Error (MSE) yang paling rendah, baik pada data latih maupun data uji, mengindikasikan prediksi yang paling akurat.
-- Proses optimasi hyperparameter menggunakan Grid Search berhasil meningkatkan kinerja RF secara signifikan, menjadikannya model yang paling unggul di antara alternatif lain seperti KNN dan Boosting.
+  - Setelah membandingkan beberapa algoritma machine learning, model Random Forest (RF) menunjukkan performa terbaik dalam memprediksi harga kendaraan bekas.
+  - RF menghasilkan nilai Mean Squared Error (MSE) yang paling rendah, baik pada data latih maupun data uji, mengindikasikan prediksi yang paling akurat.
+  - Proses optimasi hyperparameter menggunakan Grid Search berhasil meningkatkan kinerja RF secara signifikan, menjadikannya model yang paling unggul di antara alternatif lain seperti KNN dan Boosting.
 
 Dengan demikian, dapat disimpulkan bahwa faktor-faktor seperti tahun pembuatan, jarak tempuh, konsumsi bahan bakar, serta kondisi kendaraan secara komprehensif memengaruhi harga mobil bekas. Dari segi model prediksi, Random Forest (RF) terbukti menjadi algoritma terbaik untuk memprediksi harga kendaraan bekas dengan akurasi tinggi pada dataset ini.
 
 
 _Catatan:_
 - _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
-- Jika terdapat penjelasan yang harus menyertakan code snippet, tuliskan dengan sewajarnya. Tidak perlu menuliskan keseluruhan kode project, cukup bagian yang ingin dijelaskan saja.
-
