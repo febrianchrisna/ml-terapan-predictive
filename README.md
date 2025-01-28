@@ -79,7 +79,7 @@ Mengapa menggunakan IQR?
 - Cocok untuk data dengan distribusi tidak normal dan lebih tahan terhadap pengaruh outlier ekstrem dibandingkan metode lain.
 
 <pre> 
-```python cars_numerik = cars.select_dtypes(include=['number'])
+```python cars_numerik = cars.select_dtypes(include=['number'])```
 
 Q1 = cars_numerik.quantile(0.25) ```
 Q3 = cars_numerik.quantile(0.75)
