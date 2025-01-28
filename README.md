@@ -308,7 +308,8 @@ Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyel
 Mean Squared Error (MSE) digunakan sebagai metrik evaluasi untuk model regresi. MSE menghitung rata-rata kuadrat dari selisih antara nilai aktual yi dan nilai prediksi ŷi. Metrik ini sangat sensitif terhadap error besar karena perhitungan kuadratnya.
 
 **Rumus:**
-![Missing Value](assets/diagram.png)
+
+![MSE](assets/mse.jpeg)
 
 **Penjelasan:**
 - N = Jumlah data dalam dataset.
