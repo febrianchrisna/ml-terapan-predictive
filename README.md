@@ -24,7 +24,7 @@ Referensi: [Mispricing of used cars could cost UK dealers nearly £500m in 2024]
 
 ### Solution statements
 - Menggunakan algoritma dasar seperti K-Nearest Neighbors (KNN) dan Random Forest sebagai model awal untuk memprediksi harga mobil bekas.
-- Menggunakan algoritma lanjutan seperti Ada Boost Regressor
+- Menggunakan algoritma lanjutan seperti AdaBoost
 - Melakukan hyperparameter tuning menggunakan teknik seperti Grid Search untuk menemukan kombinasi parameter yang optimal dan meningkatkan performa model.
 - Mengevaluasi model dengan menggunakan metrik seperti MSE untuk mendapatkan gambaran yang lebih baik mengenai seberapa baik model memprediksi harga mobil bekas.
 
