@@ -58,6 +58,8 @@ Referensi: [Used Vehicles For Sale](https://www.kaggle.com/datasets/farhanhossei
 ## Exploratory Data Analysis
 
 ### Kesalahan Tipe Data
+![Missing Value](assets/kesalahan_tipedata.png)
+
 Pada kolom Engine, terdapat kesalahan tipe data dimana nilai string 'E' muncul, padahal seharusnya nilai tersebut adalah 0, yang menunjukkan bahwa mobil tersebut tidak memiliki mesin berbahan bakar fosil atau merupakan mobil listrik. Untuk memperbaiki hal ini, nilai 'E' telah diganti dengan 0, dan tipe data kolom tersebut telah diubah menjadi integer agar lebih sesuai dengan format yang diinginkan dan dapat digunakan dalam analisis lebih lanjut.
 
 ### Missing Value
@@ -70,7 +72,7 @@ Beberapa kolom seperti Kilometres, Engine, City, dan Highway memiliki nilai 0, y
 Dataset ini awalnya memiliki beberapa baris duplikat, yang dapat terjadi karena kesalahan pencatatan atau data yang dimasukkan lebih dari sekali. Namun, untuk memastikan kualitas dan akurasi data, baris-baris duplikat tersebut telah diidentifikasi dan dihapus, sehingga dataset ini kini hanya berisi entri yang unik dan valid.
 
 ### Menangani Outlier
-![Missing Value](assets/diagram.png)
+![Outliers](assets/outliers.png)
 
 Dataset ini mengandung outliers yang terdeteksi pada beberapa kolom tertentu. Dalam proyek ini, digunakan metode IQR untuk mendeteksi dan menangani outlier pada dataset.
 
