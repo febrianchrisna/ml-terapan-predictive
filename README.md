@@ -176,27 +176,25 @@ Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyel
 
 ## Evaluation
 ### Metrik Evaluasi
-### Evaluation Metric: Mean Squared Error (MSE)
 
 Mean Squared Error (MSE) digunakan sebagai metrik evaluasi untuk model regresi. MSE menghitung rata-rata kuadrat dari selisih antara nilai aktual (\(y_i\)) dan nilai prediksi (\(\hat{y}_i\)). Metrik ini sangat sensitif terhadap error besar karena perhitungan kuadratnya.
 
 **Rumus:**
-
-\[
-\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
-\]
+![Missing Value](assets/diagram.png)
 
 **Penjelasan:**
-- \( n \): Jumlah data dalam dataset.
-- \( y_i \): Nilai target aktual dari data ke-\(i\).
-- \( \hat{y}_i \): Nilai prediksi model untuk data ke-\(i\).
+- N : Jumlah data dalam dataset.
+- yi: Nilai target aktual
+- y_pred: Nilai prediksi model
 
 MSE yang lebih kecil menunjukkan bahwa model memiliki prediksi yang lebih akurat terhadap nilai target.
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
+### Hasil Sebelum Hyperparameter Tuning
+![Missing Value](assets/diagram.png)
 
-**---Ini adalah bagian akhir laporan---**
+### Hasi Setelah Hyperparameter Tuning
+
+## Kesimpulan
 
 _Catatan:_
 - _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
