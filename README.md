@@ -1,4 +1,4 @@
-# Laporan Proyek Machine Learning - Febrian Chrisna
+# Laporan Proyek Machine Learning - Febrian Chrisna Ardianto
 
 ## Domain Proyek
 
@@ -35,16 +35,25 @@ Dataset ini berisi informasi mengenai 24.199 kendaraan bekas yang terdaftar untu
 Referensi: [Used Vehicles For Sale](https://www.kaggle.com/datasets/farhanhossein/used-vehicles-for-sale?).
 
 ### Deskripsi Variable
-| Nama Kolom    | Deskripsi     |
-|---------------|---------------|
-| Data 1        | Data 2        |
-| Data 4        | Data 5        |
-| Data 1        | Data 2        |
-| Data 4        | Data 5        |
-| Data 1        | Data 2        |
-| Data 4        | Data 5        |
-| Data 1        | Data 2        |
-| Data 4        | Data 5        |
+|    Nama Kolom     |                Deskripsi                       |
+|-------------------|------------------------------------------------|
+| Year              | Tahun pembuatan mobil (numerik)                |
+| Make              | Merek kendaraan (kategorikal)                  |
+| Model             | Model kendaraan (kategorikal)                  |
+| Kilometres        | Jumlah kilometer yang telah ditempuh (numerik) |
+| Body_Type         | Jenis tubuh kendaraan (kategorikal)            |   
+| Engine            | Jenis mesin kendaraan (kategorikal)            |
+| Transmission      | Jenis transmisi kendaraan (kategorikal)        |
+| Drivetrain        | Jenis penggerak kendaraan (kategorikal)        |
+| Exterior_Colour   | Warna eksterior kendaraan (kategorikal)        |
+| Interior_Colour   | Warna interior kendaraan (kategorikal)         |
+| Passengers        | Jumlah penumpang kendaraan (numerik)           |
+| Doors             | Jumlah pintu kendaraan (numerik)               |
+| Fuel_Type         | Jenis bahan bakar kendaraan (kategorikal)      |
+| City              | Konsumsi bahan bakar di kota (numerik)         |
+| Highway           | Konsumsi bahan bakar di jalan tol (numerik)    |
+| Price             | Harga kendaraan (numerik)                      |
+
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
 - Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
