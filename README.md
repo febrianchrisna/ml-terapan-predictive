@@ -54,46 +54,34 @@ Referensi: [Used Vehicles For Sale](https://www.kaggle.com/datasets/farhanhossei
 | Highway           | Konsumsi bahan bakar di jalan tol (numerik)    |
 | Price             | Harga kendaraan (numerik)                      |
 
-
-## Exploratory Data Analysis
+Jumlah Baris (Entries): 18,647 baris data, terdapat 18,647 entri atau record yang tercatat dalam dataset ini.
+Jumlah Kolom (Columns): 16 kolom data, yang mencakup berbagai atribut terkait kendaraan yang dicatat dalam dataset.
 
 ### Kesalahan Tipe Data
+
 ![Missing Value](assets/kesalahan_tipedata.png)
 
-Pada kolom Engine, terdapat kesalahan tipe data dimana nilai string 'E' muncul, padahal seharusnya nilai tersebut adalah 0, yang menunjukkan bahwa mobil tersebut tidak memiliki mesin berbahan bakar fosil atau merupakan mobil listrik. Untuk memperbaiki hal ini, nilai 'E' telah diganti dengan 0, dan tipe data kolom tersebut telah diubah menjadi integer agar lebih sesuai dengan format yang diinginkan dan dapat digunakan dalam analisis lebih lanjut.
+Pada dataset ini, terdapat beberapa kolom yang memiliki nilai yang hilang. Kolom Kilometres memiliki 470 nilai yang hilang, sementara kolom Engine memiliki 331 nilai yang hilang. Kolom City dan Highway masing-masing memiliki 255 nilai yang hilang. Sementara itu, kolom lainnya seperti Year, Make, dan Model tidak memiliki nilai yang hilang.
 
 ### Missing Value
-Dataset yang digunakan tidak memiliki data null atau kosong. Namun dalam dataset terdapat baris data dengan value 0.
 
 ![Missing Value](assets/missing_value.png)
 
-Beberapa kolom seperti Kilometres, Engine, City, dan Highway memiliki nilai 0, yang sebenarnya wajar. Nilai 0 pada Kilometres bisa menunjukkan mobil baru yang belum terpakai. Pada Engine, 0 mungkin merujuk pada kendaraan listrik atau yang tidak memiliki mesin berbahan bakar fosil. Sementara pada City dan Highway, nilai 0 bisa terjadi jika konsumsi bahan bakar belum diuji atau kendaraan baru yang efisien. Nilai 0 ini tidak mempengaruhi validitas data.
+Dataset yang digunakan tidak memiliki data null atau kosong. Namun dalam dataset terdapat baris data dengan value 0.
 
-Dataset ini awalnya memiliki beberapa baris duplikat, yang dapat terjadi karena kesalahan pencatatan atau data yang dimasukkan lebih dari sekali. Namun, untuk memastikan kualitas dan akurasi data, baris-baris duplikat tersebut telah diidentifikasi dan dihapus, sehingga dataset ini kini hanya berisi entri yang unik dan valid.
+### Data Duplikat
 
-### Menangani Outlier
+![Duplikat Data](https://github.com/user-attachments/assets/d3e7f1fb-f66d-4be4-a2c0-0378a648d844)
+
+Dataset ini awalnya memiliki beberapa baris duplikat, yang dapat terjadi karena kesalahan pencatatan atau data yang dimasukkan lebih dari sekali.
+
+### Outlier
+
 ![Outliers](assets/outliers.png)
 
 Dataset ini mengandung outliers yang terdeteksi pada beberapa kolom tertentu. Dalam proyek ini, digunakan metode IQR untuk mendeteksi dan menangani outlier pada dataset.
 
-Mengapa menggunakan IQR?
-- IQR adalah metode statistik yang sederhana dan tidak bergantung pada asumsi distribusi data.
-- Metode ini menghitung rentang antar kuartil (Q3 - Q1), di mana Q1 adalah kuartil pertama (25%) dan Q3 adalah kuartil ketiga (75%).
-- Nilai-nilai yang berada di luar rentang [Q1 - 1.5IQR, Q3 + 1.5IQR] dianggap sebagai outlier.
-- Cocok untuk data dengan distribusi tidak normal dan lebih tahan terhadap pengaruh outlier ekstrem dibandingkan metode lain.
-
-
-```python
-cars_numerik = cars.select_dtypes(include=['number'])```
-
-Q1 = cars_numerik.quantile(0.25) ```
-Q3 = cars_numerik.quantile(0.75)
-IQR=Q3-Q1
-cars=cars[~((cars_numerik<(Q1-1.5*IQR))|(cars_numerik>(Q3+1.5*IQR))).any(axis=1)]
-
-# Cek ukuran dataset setelah kita drop outliers
-cars.shape
-```
+## Exploratory Data Analysis
 
 ### Univariate Analysis
 #### Categorical Features
@@ -240,7 +228,62 @@ Insight:
   Jalan Tol memiliki korelasi sangat kuat dengan Kota (0,91) dan sedang dengan Mesin (0,63). Hal ini menguatkan bahwa konsumsi bahan bakar di kota dan jalan tol saling terkait erat, dan kapasitas mesin turut berkontribusi pada pola konsumsi tersebut.
 
 ## Data Preparation
-Proses data preparation diperlukan untuk memastikan data yang bersih dan siap digunakan oleh model machine learning. Data preparation meliputi langkah-langkah berikut:
+
+### Menangani Kesalahan Tipe Data
+
+Pada kolom Engine, terdapat kesalahan tipe data dimana nilai string 'E' muncul, padahal seharusnya nilai tersebut adalah 0, yang menunjukkan bahwa mobil tersebut tidak memiliki mesin berbahan bakar fosil atau merupakan mobil listrik. Untuk memperbaiki hal ini, nilai 'E' telah diganti dengan 0, dan tipe data kolom tersebut telah diubah menjadi integer agar lebih sesuai dengan format yang diinginkan dan dapat digunakan dalam analisis lebih lanjut.
+
+```python
+cars['Engine'] = cars['Engine'].replace('E', 0)
+cars['Engine'] = cars['Engine'].astype(int)
+print(cars['Engine'].unique())
+```
+
+### Menangani Missing Value
+
+Beberapa kolom seperti Kilometres, Engine, City, dan Highway memiliki nilai 0, yang sebenarnya wajar. Nilai 0 pada Kilometres bisa menunjukkan mobil baru yang belum terpakai. Pada Engine, 0 mungkin merujuk pada kendaraan listrik atau yang tidak memiliki mesin berbahan bakar fosil. Sementara pada City dan Highway, nilai 0 bisa terjadi jika konsumsi bahan bakar belum diuji atau kendaraan baru yang efisien. Nilai 0 ini tidak mempengaruhi validitas data.
+
+### Menangani Data Duplikat
+
+Dataset ini awalnya memiliki beberapa baris duplikat, yang dapat terjadi karena kesalahan pencatatan atau data yang dimasukkan lebih dari sekali. Namun, untuk memastikan kualitas dan akurasi data, baris-baris duplikat tersebut telah diidentifikasi dan dihapus, sehingga dataset ini kini hanya berisi entri yang unik dan valid.
+
+```python
+duplicate_rows = cars[cars.duplicated()]
+
+if not duplicate_rows.empty:
+    print("Duplicate Rows:")
+    print(duplicate_rows)
+else:
+    print("No duplicate rows found.")
+
+cars = cars.drop_duplicates()
+```
+
+
+### Menangani Outlier
+
+Dataset ini mengandung outliers yang terdeteksi pada beberapa kolom tertentu. Dalam proyek ini, digunakan metode IQR untuk mendeteksi dan menangani outlier pada dataset.
+
+Mengapa menggunakan IQR?
+- IQR adalah metode statistik yang sederhana dan tidak bergantung pada asumsi distribusi data.
+- Metode ini menghitung rentang antar kuartil (Q3 - Q1), di mana Q1 adalah kuartil pertama (25%) dan Q3 adalah kuartil ketiga (75%).
+- Nilai-nilai yang berada di luar rentang [Q1 - 1.5IQR, Q3 + 1.5IQR] dianggap sebagai outlier.
+- Cocok untuk data dengan distribusi tidak normal dan lebih tahan terhadap pengaruh outlier ekstrem dibandingkan metode lain.
+
+
+```python
+cars_numerik = cars.select_dtypes(include=['number'])```
+
+Q1 = cars_numerik.quantile(0.25) ```
+Q3 = cars_numerik.quantile(0.75)
+IQR=Q3-Q1
+cars=cars[~((cars_numerik<(Q1-1.5*IQR))|(cars_numerik>(Q3+1.5*IQR))).any(axis=1)]
+
+# Cek ukuran dataset setelah kita drop outliers
+cars.shape
+```
+
+Setelah dipastikan bahwa data bersih dan siap digunakan oleh model machine learning. Langkah selanjutnya dalam Data preparation meliputi langkah-langkah berikut:
 1. Encoding Fitur Kategori: Fitur kategori seperti Make, Model, Body_Type, dll., diubah menjadi format numerik menggunakan One-Hot Encoding. Tujuan dari encoding ini adalah agar model machine learning dapat memproses data kategorikal dengan lebih baik karena sebagian besar model hanya bisa bekerja dengan data numerik
 2. Train Test Split: Dataset dibagi menjadi 80% data pelatihan (X_train, y_train) dan 20% data pengujian (X_test, y_test). Fitur (X) adalah semua kolom kecuali Price, sementara target (y) adalah kolom Price
 3. Standarisasi: Fitur numerik seperti Year, Kilometres, Efficiency, dan Engine distandarisasi menggunakan StandardScaler. Tujuan standarisasi adalah untuk membawa semua fitur ke skala yang sama, sehingga model tidak akan condong ke fitur dengan nilai lebih besar, menghindari bias dalam pemodelan
@@ -288,8 +331,9 @@ Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyel
     AdaBoost (Adaptive Boosting) adalah algoritma ensemble yang membangun model prediktif secara iteratif. Pada setiap iterasi, model yang lebih lemah diberikan bobot lebih besar untuk memperbaiki kesalahan yang dibuat oleh model sebelumnya. AdaBoost bekerja dengan meningkatkan model-model yang lemah menjadi model yang lebih kuat dengan memberikan perhatian lebih pada data yang sulit diprediksi
 
     Parameter:
-    - `n_estimators=100:` Menentukan jumlah iterasi (jumlah model yang akan digabungkan). Semakin besar jumlah estimators, semakin kuat modelnya.
-    - `random_state=55:` Mengatur seed untuk menghasilkan hasil yang dapat diulang.
+    - `n_estimators=250:` Menentukan jumlah iterasi (jumlah model yang akan digabungkan). Semakin besar jumlah estimators, semakin kuat modelnya.
+    - `learning_rate=0.01`: Mengontrol seberapa besar pengaruh setiap model baru pada keseluruhan model yang dihasilkan. Dengan nilai yang kecil seperti 0.01, model akan belajar lebih perlahan, memberikan kontribusi lebih kecil pada setiap iterasi
+    - `random_state=50:` Mengatur seed untuk menghasilkan hasil yang dapat diulang.
       
   ```python
     from sklearn.ensemble import AdaBoostRegressor
