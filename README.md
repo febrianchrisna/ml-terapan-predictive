@@ -286,15 +286,15 @@ cars.shape
 
 ### Drop Fitur Doors dan Passengers
 
-![Screenshot 2025-01-31 171447](https://github.com/user-attachments/assets/6dd34fd0-a232-45f5-ae12-02cfe7207add)
+![Drop Feature](https://github.com/user-attachments/assets/6dd34fd0-a232-45f5-ae12-02cfe7207add)
 
 Berdasarkan deskripsi statistik dari kedua fitur ini, yaitu Doors dan Passengers, dapat dilihat bahwa keduanya memiliki nilai yang sama secara konsisten untuk semua baris data yaitu Doors selalu bernilai 4, dan Passengers selalu bernilai 5.
+
+Hal ini menunjukkan bahwa kedua fitur ini tidak mengandung variasi atau informasi yang berguna karena nilainya statis di seluruh dataset. Ketika diperiksa lebih lanjut dalam correlation matrix, keduanya tidak memiliki hubungan yang berarti dengan fitur lainnya, bahkan tidak ada nilai numerik yang muncul. Oleh karena itu, kedua fitur ini harus di-drop, karena mereka tidak memberikan kontribusi apa pun terhadap model dan hanya akan menambah kompleksitas data tanpa menambah informasi yang berguna
 
 ```python
 cars = cars.drop(['Doors', 'Passengers'], axis=1)
 ```
-
-Hal ini menunjukkan bahwa kedua fitur ini tidak mengandung variasi atau informasi yang berguna karena nilainya statis di seluruh dataset. Ketika diperiksa lebih lanjut dalam correlation matrix, keduanya tidak memiliki hubungan yang berarti dengan fitur lainnya, bahkan tidak ada nilai numerik yang muncul. Oleh karena itu, kedua fitur ini harus di-drop, karena mereka tidak memberikan kontribusi apa pun terhadap model dan hanya akan menambah kompleksitas data tanpa menambah informasi yang berguna
 
 Setelah dipastikan bahwa data bersih dan siap digunakan oleh model machine learning. Langkah selanjutnya dalam Data preparation meliputi langkah-langkah berikut:
 1. Encoding Fitur Kategori: Fitur kategori seperti Make, Model, Body_Type, dll., diubah menjadi format numerik menggunakan One-Hot Encoding. Tujuan dari encoding ini adalah agar model machine learning dapat memproses data kategorikal dengan lebih baik karena sebagian besar model hanya bisa bekerja dengan data numerik
