@@ -76,7 +76,7 @@ Pada dataset ini, terdapat beberapa kolom yang memiliki nilai yang hilang. Kolom
 
 Terdapat duplikasi data pada dataset ini, di mana beberapa entri kendaraan memiliki informasi yang sama persis, termasuk Year, Make, Model, Kilometres, Engine, Transmission, Drivetrain, Exterior_Colour, Interior_Colour, Passengers, Doors, Fuel_Type, City, Highway, dan Price. Duplikasi ini terjadi pada beberapa baris berturut-turut dengan ID yang berbeda, yang kemungkinan disebabkan oleh kesalahan dalam pengumpulan atau pengolahan data. Data duplikat ini perlu dihapus atau ditangani pada tahap data preparation untuk mencegah pengaruh negatif pada analisis atau pemodelan.
 
-### Outlier
+### Outliers
 
 ![Outliers](assets/outliers.png)
 
@@ -260,8 +260,7 @@ else:
 cars = cars.drop_duplicates()
 ```
 
-
-### Menangani Outlier
+### Menangani Outliers
 
 Dataset ini mengandung outliers yang terdeteksi pada beberapa kolom tertentu. Dalam proyek ini, digunakan metode IQR untuk mendeteksi dan menangani outlier pada dataset.
 
