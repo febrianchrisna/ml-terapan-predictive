@@ -55,31 +55,32 @@ Referensi: [Used Vehicles For Sale](https://www.kaggle.com/datasets/farhanhossei
 | Price             | Harga kendaraan (numerik)                      |
 
 Jumlah Baris (Entries): 18,647 baris data, terdapat 18,647 entri atau record yang tercatat dalam dataset ini.
+
 Jumlah Kolom (Columns): 16 kolom data, yang mencakup berbagai atribut terkait kendaraan yang dicatat dalam dataset.
 
 ### Kesalahan Tipe Data
 
-![Missing Value](assets/kesalahan_tipedata.png)
+![Kesalahan tipe data](assets/kesalahan_tipedata.png)
 
-Pada dataset ini, terdapat beberapa kolom yang memiliki nilai yang hilang. Kolom Kilometres memiliki 470 nilai yang hilang, sementara kolom Engine memiliki 331 nilai yang hilang. Kolom City dan Highway masing-masing memiliki 255 nilai yang hilang. Sementara itu, kolom lainnya seperti Year, Make, dan Model tidak memiliki nilai yang hilang.
+Terdapat kesalahan tipe data pada kolom Engine, yang seharusnya berisi angka. Hal ini dapat menyebabkan masalah saat analisis atau pemodelan data. Masalah ini akan ditangani pada tahap data preparation, di mana tipe data pada kolom Engine akan diperbaiki agar sesuai dengan format yang diinginkan
 
 ### Missing Value
 
 ![Missing Value](assets/missing_value.png)
 
-Dataset yang digunakan tidak memiliki data null atau kosong. Namun dalam dataset terdapat baris data dengan value 0.
+Pada dataset ini, terdapat beberapa kolom yang memiliki nilai yang hilang. Kolom Kilometres memiliki 470 nilai yang hilang, sementara kolom Engine memiliki 331 nilai yang hilang. Kolom City dan Highway masing-masing memiliki 255 nilai yang hilang. Sementara itu, kolom lainnya seperti Year, Make, dan Model tidak memiliki nilai yang hilang.
 
 ### Data Duplikat
 
 ![Duplikat Data](https://github.com/user-attachments/assets/d3e7f1fb-f66d-4be4-a2c0-0378a648d844)
 
-Dataset ini awalnya memiliki beberapa baris duplikat, yang dapat terjadi karena kesalahan pencatatan atau data yang dimasukkan lebih dari sekali.
+Terdapat duplikasi data pada dataset ini, di mana beberapa entri kendaraan memiliki informasi yang sama persis, termasuk Year, Make, Model, Kilometres, Engine, Transmission, Drivetrain, Exterior_Colour, Interior_Colour, Passengers, Doors, Fuel_Type, City, Highway, dan Price. Duplikasi ini terjadi pada beberapa baris berturut-turut dengan ID yang berbeda, yang kemungkinan disebabkan oleh kesalahan dalam pengumpulan atau pengolahan data. Data duplikat ini perlu dihapus atau ditangani pada tahap data preparation untuk mencegah pengaruh negatif pada analisis atau pemodelan.
 
 ### Outlier
 
 ![Outliers](assets/outliers.png)
 
-Dataset ini mengandung outliers yang terdeteksi pada beberapa kolom tertentu. Dalam proyek ini, digunakan metode IQR untuk mendeteksi dan menangani outlier pada dataset.
+Pada boxplot ini, terlihat banyak outlier pada beberapa kolom, seperti Kilometres, Engine, City, Highway, dan Price. Nilai-nilai ekstrem ini berada jauh di luar rentang normal dan dapat mempengaruhi hasil analisis. Outlier tersebut perlu ditangani pada tahap data preparation agar tidak mengganggu pemodelan atau analisis selanjutnya.
 
 ## Exploratory Data Analysis
 
@@ -353,7 +354,7 @@ Mean Squared Error (MSE) digunakan sebagai metrik evaluasi untuk model regresi. 
 
 **Rumus:**
 
-![MSE](assets/mse.jpeg)
+![mse](https://github.com/user-attachments/assets/b87f5fac-dab5-4de0-b1df-9f0f7928fcc1)
 
 **Penjelasan:**
 - N = Jumlah data dalam dataset.
@@ -371,7 +372,8 @@ MSE yang lebih kecil menunjukkan bahwa model memiliki prediksi yang lebih akurat
   KNN mencatat nilai MSE **32,852.48** pada data latih dan meningkat signifikan menjadi **40,236.50** pada data uji. Selisih yang cukup besar ini mengindikasikan bahwa KNN cenderung mengalami overfitting.
 
 - Boosting: 
-  Boosting memiliki nilai MSE yang lebih tinggi, yaitu **98,725.31** pada data latih, yang hanya sedikit meningkat menjadi **98,770.90** pada data uji. Selisih yang kecil ini menandakan bahwa Boosting memiliki kemampuan generalisasi yang stabil, meskipun kinerjanya secara keseluruhan lebih rendah dibandingkan RF.
+  Boosting memiliki nilai MSE yang lebih tinggi, yaitu **98,725.31** pada data latih, yang hanya sedikit meningkat menjadi **98,770.90** pada data uji. Selisih yang kecil ini menandakan bahwa Boosting memiliki kemampuan generalis
+asi yang stabil, meskipun kinerjanya secara keseluruhan lebih rendah dibandingkan RF.
 
 Jadi Random Forest (RF) menunjukkan performa terbaik dengan nilai MSE yang rendah dan generalisasi yang baik. KNN cenderung overfitting, sementara Boosting memiliki stabilitas, namun performanya masih kalah dari RF. Oleh karena itu, RF menjadi model yang paling ideal untuk dataset ini.
 
