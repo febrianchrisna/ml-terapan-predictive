@@ -1,4 +1,4 @@
-![Screenshot 2025-02-04 202841](https://github.com/user-attachments/assets/f40e8bc5-9d97-47c7-bbf7-54ba30b85540)# Laporan Proyek Machine Learning - Febrian Chrisna Ardianto
+# Laporan Proyek Machine Learning - Febrian Chrisna Ardianto
 
 ## Domain Proyek
 
