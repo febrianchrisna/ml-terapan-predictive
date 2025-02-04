@@ -1,4 +1,4 @@
-# Laporan Proyek Machine Learning - Febrian Chrisna Ardianto
+![Screenshot 2025-02-04 202841](https://github.com/user-attachments/assets/f40e8bc5-9d97-47c7-bbf7-54ba30b85540)# Laporan Proyek Machine Learning - Febrian Chrisna Ardianto
 
 ## Domain Proyek
 
@@ -60,13 +60,13 @@ Jumlah Kolom (Columns): 16 kolom data, yang mencakup berbagai atribut terkait ke
 
 ### Kesalahan Tipe Data
 
-![Kesalahan tipe data](assets/kesalahan_tipedata.png)
+![Kesalahan Tipe Data](https://github.com/user-attachments/assets/d387ade0-00dd-4aef-a066-7016e769e344)
 
 Terdapat kesalahan tipe data pada kolom Engine, yang seharusnya berisi angka. Hal ini dapat menyebabkan masalah saat analisis atau pemodelan data. Masalah ini akan ditangani pada tahap data preparation, di mana tipe data pada kolom Engine akan diperbaiki agar sesuai dengan format yang diinginkan
 
 ### Missing Value
 
-![Missing Value](assets/missing_value.png)
+![Missing Value](https://github.com/user-attachments/assets/76400945-c8c3-4ea8-abc9-30ec70e62611)
 
 Pada dataset ini, terdapat beberapa kolom yang memiliki nilai yang hilang. Kolom Kilometres memiliki 470 nilai yang hilang, sementara kolom Engine memiliki 331 nilai yang hilang. Kolom City dan Highway masing-masing memiliki 255 nilai yang hilang. Sementara itu, kolom lainnya seperti Year, Make, dan Model tidak memiliki nilai yang hilang.
 
@@ -78,7 +78,8 @@ Terdapat duplikasi data pada dataset ini, di mana beberapa entri kendaraan memil
 
 ### Outliers
 
-![Outliers](assets/outliers.png)
+![Outliers](https://github.com/user-attachments/assets/d17b0def-fad5-4e7d-bc5a-7f30a3487879)
+
 
 Pada boxplot ini, terlihat banyak outlier pada beberapa kolom, seperti Kilometres, Engine, City, Highway, dan Price. Nilai-nilai ekstrem ini berada jauh di luar rentang normal dan dapat mempengaruhi hasil analisis. Outlier tersebut perlu ditangani pada tahap data preparation agar tidak mengganggu pemodelan atau analisis selanjutnya.
 
@@ -88,7 +89,7 @@ Pada boxplot ini, terlihat banyak outlier pada beberapa kolom, seperti Kilometre
 #### Categorical Features
 Make:
 
-![Make](assets/make.png)
+![Nake](https://github.com/user-attachments/assets/ccaba496-4ceb-40ff-b756-05b5ce94a9b2)
 
 Insight:
 - Hyundai, Kia, Ford, dan Nissan merupakan merek yang paling banyak terwakili dalam dataset, menunjukkan popularitas dan potensi pasar yang kuat.
@@ -98,7 +99,7 @@ Insight:
   
 Model:
 
-![Model](assets/model.png)
+![Model](https://github.com/user-attachments/assets/24b4971d-90e5-47f1-84b8-04ab20a39780)
 
 Insight:
 - Distribusi jumlah sampel per model memiliki pola sangat asimetris, dengan beberapa model menunjukkan volume yang sangat besar dibandingkan model lain.
@@ -107,7 +108,7 @@ Insight:
 
 Body_Type:
 
-![Body_Type](assets/body_type.png)
+![Body Type](https://github.com/user-attachments/assets/107fb359-0004-47a2-86b9-10561ff9a12e)
 
 Insight:
 - SUV merupakan jenis bodi yang paling umum, dengan lebih dari 5.000 sampel. Hal ini menunjukkan bahwa SUV adalah jenis kendaraan bekas yang paling banyak terdapat dalam dataset.
@@ -116,7 +117,7 @@ Insight:
 
 Transmission:
 
-![Transmission](assets/transmisson.png)
+![Transmission](https://github.com/user-attachments/assets/d7694a11-d81a-4dce-abfd-9095874bfd41)
 
 Insight:
 - Automatic transmisi memiliki jumlah sampel yang jauh lebih besar dibandingkan jenis transmisi lainnya, menunjukkan bahwa transmisi otomatis sangat dominan dalam dataset kendaraan bekas ini.
@@ -126,7 +127,7 @@ Insight:
 
 Drivetrain:
 
-![Drivetrain](assets/drivetrain.png)
+![Drivetrain](https://github.com/user-attachments/assets/d7f9ad14-42e3-4732-8602-54b3db62a173)
 
 Insight:
 - AWD (All-Wheel Drive) memiliki jumlah sampel yang jauh lebih besar dibandingkan jenis drivetrain lainnya, menunjukkan bahwa model kendaraan dengan penggerak roda empat (AWD) sangat dominan dalam dataset ini.
@@ -136,7 +137,8 @@ Insight:
 
 Exterior_Colour:
 
-![Exterior_Colour](assets/ext_color.png)
+![Exterior Colour](https://github.com/user-attachments/assets/a11122d0-75d2-46a1-a2f2-d5539bcdb1bb)
+
 
 Insight:
 - Distribusi jenis warna eksterior kendaraan dalam dataset ini sangat beragam, dengan banyak kategori yang berbeda-beda.
@@ -146,7 +148,7 @@ Insight:
 
 Interior_Colour:
 
-![Interior_Colour](assets/int_color.png)
+![Interior Colour](https://github.com/user-attachments/assets/78be38ce-e1e0-456c-b66f-db41d507ee4d)
 
 Insight:
 - Berdasarkan grafik, warna interior yang paling dominan adalah Black dengan jumlah sampel yang jauh melebihi kategori warna interior lainnya. Ini menunjukkan bahwa kendaraan dengan interior berwarna gelap atau hitam sangat populer di pasar kendaraan bekas.
@@ -156,7 +158,7 @@ Insight:
 
 Fuel_Type:
 
-![Fuel_Type](assets/fuel_type.png)
+![Fuel Type](https://github.com/user-attachments/assets/f26f4429-7ce1-4340-bf13-16be36e11f35)
 
 Insight:
 - Dari grafik, dapat dilihat bahwa jenis bahan bakar yang paling dominan adalah Gas. Jumlah sampel untuk Gas sangat tinggi, jauh melebihi kategori bahan bakar lainnya.
@@ -165,7 +167,7 @@ Insight:
 - Secara keseluruhan, visualisasi fitur Fuel_Type mengungkapkan bahwa kendaraan berbahan bakar gas adalah pilihan dominan di pasar kendaraan bekas
 
 ### Numerical Features
-![Numerical Features](assets/num_features.png)
+![Numerical Features](https://github.com/user-attachments/assets/b2cd2c45-b068-4c6c-ad7c-b3b3a8faf5a5)
 
 Insight:
 - Tahun Pembuatan (Year):
@@ -189,7 +191,7 @@ Distribusi harga kendaraan bekas menunjukkan variasi yang cukup besar, dari harg
 
 ## Multivariate Analysis
 ### Categorical Features
-![Categorical Features](assets/categorical_feature.png)
+![Categorical Features](https://github.com/user-attachments/assets/3834b6a8-33a2-4772-8b83-28da5faac35b)
 
 Insight:
 - Merek vs Harga: Grafik pertama menunjukkan variasi yang signifikan pada harga rata-rata kendaraan bekas di antara berbagai merek, dengan beberapa merek seperti Toyota dan Honda memiliki harga yang jauh lebih tinggi dibandingkan merek lain seperti Mitsubishi dan Geo. Hal ini mengindikasikan bahwa merek kendaraan merupakan faktor penting yang menentukan harga kendaraan bekas.
@@ -205,7 +207,8 @@ Insight:
 ### Correlation Matrix
 ### Numerical Features
 Heatmap digunakan untuk menggambarkan matriks korelasi antar fitur dalam dataset, yang menunjukkan sejauh mana hubungan linear antar fitur. Nilai korelasi ini membantu dalam proses seleksi fitur dengan mengidentifikasi fitur-fitur yang saling berkorelasi kuat. Untuk mengukur hubungan antara fitur numerik dan fitur target, metode Spearman dapat digunakan, karena mampu mengukur korelasi monotonik, yaitu hubungan yang tidak selalu linear, namun tetap menunjukkan kecenderungan pergerakan bersama antara dua variabel. Dimana berguna ketika data tidak mengikuti hubungan linear yang sempurna
-![Matrix](assets/matrix.png)
+
+![Matrix](https://github.com/user-attachments/assets/350c3add-4179-411f-813e-e16e67436a79)
 
 Insight:
 - Tahun (Year) vs Lainnya
@@ -297,9 +300,9 @@ cars = cars.drop(['Doors', 'Passengers'], axis=1)
 
 Setelah dipastikan bahwa data bersih dan siap digunakan oleh model machine learning. Langkah selanjutnya dalam Data preparation meliputi langkah-langkah berikut:
 1. Encoding Fitur Kategori: Fitur kategori seperti Make, Model, Body_Type, dll., diubah menjadi format numerik menggunakan One-Hot Encoding. Tujuan dari encoding ini adalah agar model machine learning dapat memproses data kategorikal dengan lebih baik karena sebagian besar model hanya bisa bekerja dengan data numerik
-2. Train Test Split: Dataset dibagi menjadi 80% data pelatihan (X_train, y_train) dan 20% data pengujian (X_test, y_test). Fitur (X) adalah semua kolom kecuali Price, sementara target (y) adalah kolom Price
-3. Standarisasi: Fitur numerik seperti Year, Kilometres, Efficiency, dan Engine distandarisasi menggunakan StandardScaler. Tujuan standarisasi adalah untuk membawa semua fitur ke skala yang sama, sehingga model tidak akan condong ke fitur dengan nilai lebih besar, menghindari bias dalam pemodelan
-4. Reduksi dimensi fitur dengan PCA: Fitur City dan Highway digabungkan menjadi satu fitur baru Efficiency menggunakan PCA karena kedua fitur tersebut memiliki korelasi yang tinggi. Tujuan dari PCA adalah untuk mengurangi dimensi fitur, mengurangi kompleksitas data, dan menangkap informasi penting dalam satu komponen, sehingga model menjadi lebih efisien
+2. Reduksi dimensi fitur dengan PCA: Fitur City dan Highway digabungkan menjadi satu fitur baru Efficiency menggunakan PCA karena kedua fitur tersebut memiliki korelasi yang tinggi. Tujuan dari PCA adalah untuk mengurangi dimensi fitur, mengurangi kompleksitas data, dan menangkap informasi penting dalam satu komponen, sehingga model menjadi lebih efisien
+3. Train Test Split: Dataset dibagi menjadi 80% data pelatihan (X_train, y_train) dan 20% data pengujian (X_test, y_test). Fitur (X) adalah semua kolom kecuali Price, sementara target (y) adalah kolom Price
+4. Standarisasi: Fitur numerik seperti Year, Kilometres, Efficiency, dan Engine distandarisasi menggunakan StandardScaler. Tujuan standarisasi adalah untuk membawa semua fitur ke skala yang sama, sehingga model tidak akan condong ke fitur dengan nilai lebih besar, menghindari bias dalam pemodelan
 
 ## Modeling
 Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Algoritma yang digunakan yaitu:
@@ -375,7 +378,9 @@ Mean Squared Error (MSE) digunakan sebagai metrik evaluasi untuk model regresi. 
 MSE yang lebih kecil menunjukkan bahwa model memiliki prediksi yang lebih akurat terhadap nilai target.
 
 ### Hasil Sebelum Hyperparameter Tuning
-![Hasil](assets/hasil.png)
+
+![Hasil](https://github.com/user-attachments/assets/eb203739-00cc-40d8-a958-958828f3daa7)
+
 - Random Forest (RF):
   RF menghasilkan nilai MSE sebesar **19,442.80** pada data latih, yang meningkat menjadi **31,629.55** pada data uji. Peningkatan yang tidak terlalu besar ini menunjukkan bahwa RF memiliki kemampuan generalisasi yang baik.
 
@@ -390,7 +395,9 @@ Jadi Random Forest (RF) menunjukkan performa terbaik dengan nilai MSE yang renda
 
 ### Hasi Setelah Hyperparameter Tuning
 Untuk meningkatkan performa model, dilakukan Hyperparameter Tuning menggunakan Grid Search, sebuah teknik sistematis untuk menguji kombinasi parameter tertentu guna menemukan konfigurasi terbaik. Grid Search bekerja dengan mencoba semua kemungkinan kombinasi parameter yang didefinisikan sebelumnya, lalu mengevaluasi performa model berdasarkan metrik tertentu, seperti Mean Squared Error (MSE).
-![Tuning](assets/tuning.png)
+
+![Hasil Tuning](https://github.com/user-attachments/assets/b69bb324-dee9-4841-bad7-4947843812a6)
+
 - Random Forest (RF):
   Setelah dilakukan tuning, nilai MSE pada data latih turun secara signifikan menjadi 4,076,945.91, sementara pada data uji juga mengalami penurunan yang cukup besar menjadi 22,735,601.10. Perbaikan kinerja yang signifikan ini menunjukkan bahwa model RF sangat responsif terhadap optimasi hyperparameter. Dengan kemampuan generalisasi yang sangat baik, RF muncul sebagai model terbaik di antara ketiga pilihan yang ada.
 
